@@ -1,6 +1,10 @@
 require './lib/card'
 require './lib/deck'
 
+RSpec.configure do |config|
+    config.formatter = :documentation
+end
+
 RSpec.describe Card do
     it 'returns an array of cards' do
         card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
