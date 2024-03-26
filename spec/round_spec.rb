@@ -62,4 +62,24 @@ RSpec.describe Round do
             expect(@round.percent_correct).to eq(67)
         end
     end
+
+    describe 'number_correct_by_category' do
+        it 'returns percent correct' do
+
+            @round.take_turn('Juneau')
+            @round.take_turn('Mars')
+            @round.take_turn('South South East')
+            expect(@round.number_correct_by_category(:STEM)).to eq(1)
+        end
+    end
+
+    describe 'percent_correct_by_category' do
+        it 'returns percent correct' do
+
+            @round.take_turn('Juneau')
+            @round.take_turn('Mars')
+            @round.take_turn('South South East')
+            expect(@round.percent_correct_by_category(:STEM)).to eq(50)
+        end
+    end
 end
