@@ -11,7 +11,6 @@ class Deck
                 category_cards << card
             end
         end
-        # return category_cards
     end
 
     def count
